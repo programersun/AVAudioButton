@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name                 = "AVAudioButton"
-s.version              = "1.0.0"
+s.version              = "1.0.1"
 s.summary              = "AVAudioButton"
 s.homepage             = "https://github.com/programersun/AVAudioButton"
 s.license              = { :type => "MIT", :file => "LICENSE" }
