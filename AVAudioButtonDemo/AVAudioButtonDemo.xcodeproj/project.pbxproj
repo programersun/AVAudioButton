@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18996CCC1DB4693F0089D156 /* AVAudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CBF1DB4693F0089D156 /* AVAudioButton.m */; };
+		18996CCD1DB4693F0089D156 /* AVAudioPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CC21DB4693F0089D156 /* AVAudioPlayButton.m */; };
+		18996CCF1DB4693F0089D156 /* AVAudioVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CC61DB4693F0089D156 /* AVAudioVolumeView.m */; };
+		18996CD01DB4693F0089D156 /* cancelAVAudio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18996CC81DB4693F0089D156 /* cancelAVAudio@2x.png */; };
+		18996CD11DB4693F0089D156 /* cancelAVAudio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18996CC91DB4693F0089D156 /* cancelAVAudio@3x.png */; };
+		18996CD21DB4693F0089D156 /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18996CCA1DB4693F0089D156 /* microphone@2x.png */; };
+		18996CD31DB4693F0089D156 /* microphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18996CCB1DB4693F0089D156 /* microphone@3x.png */; };
+		18C13F5F1DB0770C005EAE50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C13F5E1DB0770C005EAE50 /* main.m */; };
+		18C13F621DB0770C005EAE50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C13F611DB0770C005EAE50 /* AppDelegate.m */; };
+		18C13F651DB0770C005EAE50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C13F641DB0770C005EAE50 /* ViewController.m */; };
+		18C13F681DB0770C005EAE50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C13F661DB0770C005EAE50 /* Main.storyboard */; };
+		18C13F6A1DB0770C005EAE50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C13F691DB0770C005EAE50 /* Assets.xcassets */; };
+		18C13F6D1DB0770C005EAE50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C13F6B1DB0770C005EAE50 /* LaunchScreen.storyboard */; };
+		18D0488D1DB5CF1300ED09B2 /* AVAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */; };
+		18D048911DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18996CBE1DB4693F0089D156 /* AVAudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioButton.h; sourceTree = "<group>"; };
+		18996CBF1DB4693F0089D156 /* AVAudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioButton.m; sourceTree = "<group>"; };
+		18996CC01DB4693F0089D156 /* AVAudioButtonConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioButtonConfigure.h; sourceTree = "<group>"; };
+		18996CC11DB4693F0089D156 /* AVAudioPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioPlayButton.h; sourceTree = "<group>"; };
+		18996CC21DB4693F0089D156 /* AVAudioPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioPlayButton.m; sourceTree = "<group>"; };
+		18996CC51DB4693F0089D156 /* AVAudioVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioVolumeView.h; sourceTree = "<group>"; };
+		18996CC61DB4693F0089D156 /* AVAudioVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioVolumeView.m; sourceTree = "<group>"; };
+		18996CC81DB4693F0089D156 /* cancelAVAudio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelAVAudio@2x.png"; sourceTree = "<group>"; };
+		18996CC91DB4693F0089D156 /* cancelAVAudio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancelAVAudio@3x.png"; sourceTree = "<group>"; };
+		18996CCA1DB4693F0089D156 /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
+		18996CCB1DB4693F0089D156 /* microphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@3x.png"; sourceTree = "<group>"; };
+		18C13F5A1DB0770C005EAE50 /* AVAudioButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C13F5E1DB0770C005EAE50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18C13F601DB0770C005EAE50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18C13F611DB0770C005EAE50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18C13F631DB0770C005EAE50 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18C13F641DB0770C005EAE50 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18C13F671DB0770C005EAE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18C13F691DB0770C005EAE50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C13F6C1DB0770C005EAE50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C13F6E1DB0770C005EAE50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D0488B1DB5CF1300ED09B2 /* AVAudioView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioView.h; sourceTree = "<group>"; };
+		18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioView.m; sourceTree = "<group>"; };
+		18D0488E1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioPlayTableViewCell.h; sourceTree = "<group>"; };
+		18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioPlayTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C13F571DB0770C005EAE50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18996CBD1DB4693F0089D156 /* AVAudioButton */ = {
+			isa = PBXGroup;
+			children = (
+				18996CC71DB4693F0089D156 /* images */,
+				18996CBE1DB4693F0089D156 /* AVAudioButton.h */,
+				18996CBF1DB4693F0089D156 /* AVAudioButton.m */,
+				18996CC01DB4693F0089D156 /* AVAudioButtonConfigure.h */,
+				18D0488B1DB5CF1300ED09B2 /* AVAudioView.h */,
+				18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */,
+				18996CC11DB4693F0089D156 /* AVAudioPlayButton.h */,
+				18996CC21DB4693F0089D156 /* AVAudioPlayButton.m */,
+				18996CC51DB4693F0089D156 /* AVAudioVolumeView.h */,
+				18996CC61DB4693F0089D156 /* AVAudioVolumeView.m */,
+			);
+			path = AVAudioButton;
+			sourceTree = "<group>";
+		};
+		18996CC71DB4693F0089D156 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				18996CC81DB4693F0089D156 /* cancelAVAudio@2x.png */,
+				18996CC91DB4693F0089D156 /* cancelAVAudio@3x.png */,
+				18996CCA1DB4693F0089D156 /* microphone@2x.png */,
+				18996CCB1DB4693F0089D156 /* microphone@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		18C13F511DB0770C005EAE50 = {
+			isa = PBXGroup;
+			children = (
+				18C13F5C1DB0770C005EAE50 /* AVAudioButtonDemo */,
+				18C13F5B1DB0770C005EAE50 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18C13F5B1DB0770C005EAE50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C13F5A1DB0770C005EAE50 /* AVAudioButtonDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C13F5C1DB0770C005EAE50 /* AVAudioButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				18996CBD1DB4693F0089D156 /* AVAudioButton */,
+				18C13F601DB0770C005EAE50 /* AppDelegate.h */,
+				18C13F611DB0770C005EAE50 /* AppDelegate.m */,
+				18C13F631DB0770C005EAE50 /* ViewController.h */,
+				18C13F641DB0770C005EAE50 /* ViewController.m */,
+				18D0488E1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.h */,
+				18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */,
+				18C13F661DB0770C005EAE50 /* Main.storyboard */,
+				18C13F691DB0770C005EAE50 /* Assets.xcassets */,
+				18C13F6B1DB0770C005EAE50 /* LaunchScreen.storyboard */,
+				18C13F6E1DB0770C005EAE50 /* Info.plist */,
+				18C13F5D1DB0770C005EAE50 /* Supporting Files */,
+			);
+			path = AVAudioButtonDemo;
+			sourceTree = "<group>";
+		};
+		18C13F5D1DB0770C005EAE50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18C13F5E1DB0770C005EAE50 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C13F591DB0770C005EAE50 /* AVAudioButtonDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C13F711DB0770C005EAE50 /* Build configuration list for PBXNativeTarget "AVAudioButtonDemo" */;
+			buildPhases = (
+				18C13F561DB0770C005EAE50 /* Sources */,
+				18C13F571DB0770C005EAE50 /* Frameworks */,
+				18C13F581DB0770C005EAE50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVAudioButtonDemo;
+			productName = AVAudioButtonDemo;
+			productReference = 18C13F5A1DB0770C005EAE50 /* AVAudioButtonDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C13F521DB0770C005EAE50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "济南东晨信息科技有限公司";
+				TargetAttributes = {
+					18C13F591DB0770C005EAE50 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NA242YB4F2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 18C13F551DB0770C005EAE50 /* Build configuration list for PBXProject "AVAudioButtonDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C13F511DB0770C005EAE50;
+			productRefGroup = 18C13F5B1DB0770C005EAE50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C13F591DB0770C005EAE50 /* AVAudioButtonDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C13F581DB0770C005EAE50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18996CD01DB4693F0089D156 /* cancelAVAudio@2x.png in Resources */,
+				18C13F6D1DB0770C005EAE50 /* LaunchScreen.storyboard in Resources */,
+				18996CD21DB4693F0089D156 /* microphone@2x.png in Resources */,
+				18C13F6A1DB0770C005EAE50 /* Assets.xcassets in Resources */,
+				18996CD11DB4693F0089D156 /* cancelAVAudio@3x.png in Resources */,
+				18996CD31DB4693F0089D156 /* microphone@3x.png in Resources */,
+				18C13F681DB0770C005EAE50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C13F561DB0770C005EAE50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18996CCF1DB4693F0089D156 /* AVAudioVolumeView.m in Sources */,
+				18996CCD1DB4693F0089D156 /* AVAudioPlayButton.m in Sources */,
+				18C13F651DB0770C005EAE50 /* ViewController.m in Sources */,
+				18C13F621DB0770C005EAE50 /* AppDelegate.m in Sources */,
+				18D0488D1DB5CF1300ED09B2 /* AVAudioView.m in Sources */,
+				18C13F5F1DB0770C005EAE50 /* main.m in Sources */,
+				18996CCC1DB4693F0089D156 /* AVAudioButton.m in Sources */,
+				18D048911DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18C13F661DB0770C005EAE50 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C13F671DB0770C005EAE50 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18C13F6B1DB0770C005EAE50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C13F6C1DB0770C005EAE50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C13F6F1DB0770C005EAE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C13F701DB0770C005EAE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C13F721DB0770C005EAE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NA242YB4F2;
+				INFOPLIST_FILE = AVAudioButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.AVAudioButtonDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18C13F731DB0770C005EAE50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NA242YB4F2;
+				INFOPLIST_FILE = AVAudioButtonDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.AVAudioButtonDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C13F551DB0770C005EAE50 /* Build configuration list for PBXProject "AVAudioButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C13F6F1DB0770C005EAE50 /* Debug */,
+				18C13F701DB0770C005EAE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C13F711DB0770C005EAE50 /* Build configuration list for PBXNativeTarget "AVAudioButtonDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C13F721DB0770C005EAE50 /* Debug */,
+				18C13F731DB0770C005EAE50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C13F521DB0770C005EAE50 /* Project object */;
+}
