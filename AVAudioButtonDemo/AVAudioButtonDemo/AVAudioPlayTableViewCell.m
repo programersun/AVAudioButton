@@ -16,15 +16,6 @@
     // Initialization code
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor clearColor];
-        self.audioView = [[AVAudioView alloc] initWithFrame:CGRectMake(0, 10, SCREENWIDTH, 40)];
-        [self addSubview:self.audioView];
-    }
-    return self;
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

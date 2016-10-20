@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -17,11 +17,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IbA-ny-Vfc">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AVAudioPlayTableViewCell" rowHeight="60" id="dVq-yu-oeQ" customClass="AVAudioPlayTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dVq-yu-oeQ" id="xOE-zc-VET">
+                                            <frame key="frameInset" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOy-Hc-kcZ" customClass="AVAudioView">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="BYZ-38-t0r" id="JdO-VH-QPM"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mOy-Hc-kcZ" secondAttribute="trailing" id="4TM-90-fza"/>
+                                                <constraint firstItem="mOy-Hc-kcZ" firstAttribute="top" secondItem="xOE-zc-VET" secondAttribute="top" constant="10" id="jYt-D7-xpV"/>
+                                                <constraint firstItem="mOy-Hc-kcZ" firstAttribute="leading" secondItem="xOE-zc-VET" secondAttribute="leading" id="taA-Tg-oWm"/>
+                                                <constraint firstAttribute="bottom" secondItem="mOy-Hc-kcZ" secondAttribute="bottom" constant="10" id="wXM-UH-4XY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="audioView" destination="mOy-Hc-kcZ" id="AP2-jG-Bs8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9hQ-Gf-pDe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CuE-4L-jZh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IbA-ny-Vfc" secondAttribute="bottom" constant="50" id="Ht8-Qc-0G0"/>
+                            <constraint firstAttribute="trailing" secondItem="IbA-ny-Vfc" secondAttribute="trailing" id="J8j-dh-EA9"/>
+                            <constraint firstItem="IbA-ny-Vfc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aqz-vN-kUv"/>
+                            <constraint firstItem="IbA-ny-Vfc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="eVz-5i-3Yc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="IbA-ny-Vfc" id="BOq-Ya-Jtl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-546.39999999999998" y="116.49175412293854"/>
         </scene>
     </scenes>
 </document>

@@ -150,7 +150,7 @@
     _recorder.delegate = self;
     [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord error:nil];
     [[AVAudioSession sharedInstance] setActive:YES error:nil];
-    //    [[AVAudioSession sharedInstance]  setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
+//    [[AVAudioSession sharedInstance]  setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
 }
 
 
@@ -189,6 +189,8 @@
     [self setAVAudioView];
     [self startRecorder];
     [self setTitle:@"松开 结束" forState:UIControlStateNormal];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFSVoiceBubbleShouldStopNotification object:nil];
 }
 
 #pragma mark - 手指松开
@@ -207,7 +209,7 @@
     CGPoint point = [touch locationInView:[touch view]]; //返回触摸点在视图中的当前坐标
     int currentY = point.y;
     
-//    double cTime = _recorder.currentTime;
+    double cTime = _recorder.currentTime;
     
     [_recorder stop];
     [_timer invalidate];
@@ -224,12 +226,12 @@
     } else if (currentY > - CANCELDISTANCE) {
         //success
         if (self.delegate) {
-//            if (cTime > 2) {
+            if (cTime > 2) {
                 [self.delegate successAVAudioButtonDelegate:_recorderUrl success:YES];
-//            } else {
-//                [self.delegate successAVAudioButtonDelegate:_recorderUrl success:NO];
-//                [_recorder deleteRecording];
-//            }
+            } else {
+                [self.delegate successAVAudioButtonDelegate:_recorderUrl success:NO];
+                [_recorder deleteRecording];
+            }
         }
     }
     

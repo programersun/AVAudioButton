@@ -11,14 +11,14 @@
 #import "AVAudioPlayTableViewCell.h"
 #import <AVFoundation/AVFoundation.h>
 #import "AVAudioView.h"
+#import "AVAudioButtonConfigure.h"
 
 @interface ViewController () <AVAudioButtonDelegate,AVAudioViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property(strong, nonatomic) AVAudioButton *AVAudioButton;
 @property (nonatomic, strong) NSMutableArray *recorderArray;
-@property (nonatomic, strong) UITableView *tableView;
-@property (retain, nonatomic) AVAudioPlayer *avPlay;
 @property (assign, nonatomic) NSInteger currentRow;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -43,7 +43,7 @@
     
     _currentRow = -1;
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64 - 50)];
+//    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64 - 50)];
     self.tableView.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
@@ -79,6 +79,8 @@
         }
     }
     
+    [self.recorderArray addObject:[NSURL URLWithString:@"http://192.168.1.202:9002/fileAttachs/annex/10310/20161012150838.aac/20161012150838.aac"]];
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -88,80 +90,75 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
-    });
-    NSString *cellID = @"AVAudioPlayTableViewCell";
-    AVAudioPlayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil) {
-        cell = [[AVAudioPlayTableViewCell alloc] init];
-        [cell setRestorationIdentifier:@"AVAudioPlayTableViewCell"];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if (self.tableView.contentSize.height >= self.tableView.frame.size.height) {
+        dispatch_once(&onceToken, ^{
+            [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
+        });
     }
     
-    if (indexPath.row % 3 == 0) {
+    NSString *cellID = @"AVAudioPlayTableViewCell";
+    AVAudioPlayTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (indexPath.row % 2 == 0) {
         cell.audioView.playButton.playButtonType = AVAudioPlayButtonTypeLeft;
     } else {
         cell.audioView.playButton.playButtonType = AAVAudioPlayButtonTypeRight;
     }
-
+    cell.audioView.delegate = self;
+    
     cell.audioView.contentURL = self.recorderArray[indexPath.row];
     cell.audioView.tag = indexPath.row;
+    cell.audioView.indexPath = indexPath;
+    if (indexPath.row == _currentRow) {
+        [cell.audioView startAnimating];
+    } else {
+        [cell.audioView stopAnimating];
+    }
     
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle ==UITableViewCellEditingStyleDelete)
-    {
-        NSFileManager *fileManager = [[NSFileManager alloc]init];
-        [fileManager removeItemAtURL:self.recorderArray[indexPath.row] error:nil];
-        
-        [self.recorderArray removeObjectAtIndex:indexPath.row];  //删除数组里的数据
-        
-        [self.tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    }
-}
+//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete)
+//    {
+//        NSFileManager *fileManager = [[NSFileManager alloc]init];
+//        
+//        
+//        if ([[NSString stringWithFormat:@"%@",self.recorderArray[indexPath.row]] hasPrefix:@"http"]) {
+//            NSString *urlStr = [NSString stringWithFormat:@"%@",self.recorderArray[indexPath.row]];
+//            NSRange range = [urlStr rangeOfString:@"/" options:NSBackwardsSearch];
+//            NSString *fileName = [urlStr substringWithRange:NSMakeRange(range.location + 1, urlStr.length - range.location - 1)];
+//            NSString *strUrl = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//            strUrl = [strUrl stringByAppendingPathComponent:@"download"];
+//            strUrl = [strUrl stringByAppendingPathComponent:fileName];
+//            [fileManager removeItemAtURL:[NSURL URLWithString:strUrl] error:nil];
+//
+//        } else {
+//            [fileManager removeItemAtURL:self.recorderArray[indexPath.row] error:nil];
+//        }
+//
+//        [self.recorderArray removeObjectAtIndex:indexPath.row];  //删除数组里的数据
+//        
+//        [self.tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    }
+//}
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (self.avPlay.playing) {
-//        [self.avPlay stop];
-////        return;
-//    }
-//
-//    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:self.recorderArray[indexPath.row] error:nil];
-//    self.avPlay = player;
-//    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-//    NSError *err = nil;
-//    [audioSession setCategory :AVAudioSessionCategoryPlayback error:&err];
-//    [self.avPlay play];
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return @"删除";
-}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.000001;
-}
-
 #pragma mark - AVAudioButtonDelegate
 - (void)successAVAudioButtonDelegate:(NSURL *)recorderUrl success:(BOOL)success{
     if (success) {
+        _currentRow = -1;
         [self.recorderArray addObject:recorderUrl];
         [self.tableView reloadData];
-        [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
+        if (self.tableView.contentSize.height >= self.tableView.frame.size.height) {
+            [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentSize.height - self.tableView.frame.size.height)];
+        }
     }
 }
 
@@ -169,9 +166,44 @@
     NSLog(@"cancel");
 }
 
+#pragma mark - AVAudioViewDelegate
 - (void)audioViewDidStartPlaying:(AVAudioView *)audioView
 {
-    _currentRow = audioView.tag;
+    if (audioView.tag != _currentRow) {
+        _currentRow = audioView.tag;
+    } else {
+        _currentRow = -1;
+    }
+}
+
+- (void)audioViewDidEndPlaying:(AVAudioView *)audioView {
+    _currentRow = -1;
+    [self.tableView reloadData];
+}
+
+- (void)audioPlayBtnLongPass:(AVAudioView *)audioView {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否删除" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定"style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSFileManager *fileManager = [[NSFileManager alloc]init];
+        if ([[NSString stringWithFormat:@"%@",self.recorderArray[audioView.tag]] hasPrefix:@"http"]) {
+            NSString *urlStr = [NSString stringWithFormat:@"%@",self.recorderArray[audioView.tag]];
+            NSRange range = [urlStr rangeOfString:@"/" options:NSBackwardsSearch];
+            NSString *fileName = [urlStr substringWithRange:NSMakeRange(range.location + 1, urlStr.length - range.location - 1)];
+            NSString *strUrl = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+            strUrl = [strUrl stringByAppendingPathComponent:@"download"];
+            strUrl = [strUrl stringByAppendingPathComponent:fileName];
+            [fileManager removeItemAtURL:[NSURL URLWithString:strUrl] error:nil];
+        } else {
+            [fileManager removeItemAtURL:self.recorderArray[audioView.tag] error:nil];
+        }
+        [self.recorderArray removeObjectAtIndex:audioView.tag];  //删除数组里的数据
+        [self.tableView deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:audioView.indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }];
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

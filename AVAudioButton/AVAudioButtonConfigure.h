@@ -13,12 +13,14 @@
 
 /* 取消录音的距离 **/
 #define CANCELDISTANCE 20.0f
+#define AVAudioPlayButtonMaxWidth SCREENWIDTH - 70
 
+#define AudioTimerColor [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1]
+#define AudioPlayButtonRightColor [UIColor colorWithRed:165/255.0 green:228/255.0 blue:100/255.0 alpha:1]
+#define AudioPlayButtonLeftColor [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]
+#define AudioPlayBorderColor [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1]
 
-#define AudioTimerColor [UIColor colorWithRed:100/255 green:150/255 blue:55/255 alpha:1]
-#define AudioPlayButtonRightColor [UIColor colorWithRed:165/255 green:228/255 blue:100/255 alpha:1]
-#define AudioPlayButtonLeftColor [UIColor colorWithRed:255/255 green:255/255 blue:255/255 alpha:1]
-#define AudioPlayBorderColor [UIColor colorWithRed:85/255 green:110/255 blue:60/255 alpha:1]
+#define kFSVoiceBubbleShouldStopNotification @"FSVoiceBubbleShouldStopNotification"
 
 #define AVAudioButtonConfigure_h
 

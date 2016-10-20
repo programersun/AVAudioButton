@@ -16,5 +16,6 @@ typedef enum : NSUInteger {
 @interface AVAudioPlayButton : UIButton
 
 @property (nonatomic, assign) AVAudioPlayButtonType playButtonType;
+@property (nonatomic, assign) NSInteger volume;
 
 @end

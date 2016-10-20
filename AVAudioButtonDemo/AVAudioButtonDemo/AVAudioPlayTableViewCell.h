@@ -11,6 +11,6 @@
 
 @interface AVAudioPlayTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) AVAudioView *audioView;
+@property (weak, nonatomic) IBOutlet AVAudioView *audioView;
 
 @end

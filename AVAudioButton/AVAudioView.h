@@ -14,17 +14,12 @@
 @protocol AVAudioViewDelegate <NSObject>
 
 - (void)audioViewDidStartPlaying:(AVAudioView *)audioView;
-- (void)audioViewDidEndPlaying:(AVAudioView *)audioView;
-- (void)audioPlayBtnLongPass:(AVAudioView *)audioView;
 
 @end
 
 @interface AVAudioView : UIView
 
 @property (nonatomic, strong) NSURL *contentURL;
-@property (nonatomic, strong) NSIndexPath *indexPath;
-@property (strong, nonatomic) IBInspectable UIColor *waveColor;
-@property (strong, nonatomic) IBInspectable UIColor *animatingWaveColor;
 @property (nonatomic, strong) AVAudioPlayButton *playButton;
 @property (nonatomic, assign) IBOutlet id<AVAudioViewDelegate> delegate;
 

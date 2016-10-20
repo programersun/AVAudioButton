@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1887F1251DB870FA008F0157 /* UIImage+VolumeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887F1241DB870FA008F0157 /* UIImage+VolumeExtension.m */; };
+		1887F1291DB8716D008F0157 /* volume_icon_wave_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1887F1261DB8716D008F0157 /* volume_icon_wave_0@2x.png */; };
+		1887F12A1DB8716D008F0157 /* volume_icon_wave_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1887F1271DB8716D008F0157 /* volume_icon_wave_1@2x.png */; };
+		1887F12B1DB8716D008F0157 /* volume_icon_wave_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1887F1281DB8716D008F0157 /* volume_icon_wave_2@2x.png */; };
 		18996CCC1DB4693F0089D156 /* AVAudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CBF1DB4693F0089D156 /* AVAudioButton.m */; };
 		18996CCD1DB4693F0089D156 /* AVAudioPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CC21DB4693F0089D156 /* AVAudioPlayButton.m */; };
 		18996CCF1DB4693F0089D156 /* AVAudioVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18996CC61DB4693F0089D156 /* AVAudioVolumeView.m */; };
@@ -22,9 +26,15 @@
 		18C13F6D1DB0770C005EAE50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C13F6B1DB0770C005EAE50 /* LaunchScreen.storyboard */; };
 		18D0488D1DB5CF1300ED09B2 /* AVAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */; };
 		18D048911DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */; };
+		18DEA1C11DB73958008BBD95 /* Let It Go.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18DEA1C01DB73958008BBD95 /* Let It Go.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1887F1231DB870FA008F0157 /* UIImage+VolumeExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+VolumeExtension.h"; sourceTree = "<group>"; };
+		1887F1241DB870FA008F0157 /* UIImage+VolumeExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+VolumeExtension.m"; sourceTree = "<group>"; };
+		1887F1261DB8716D008F0157 /* volume_icon_wave_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume_icon_wave_0@2x.png"; sourceTree = "<group>"; };
+		1887F1271DB8716D008F0157 /* volume_icon_wave_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume_icon_wave_1@2x.png"; sourceTree = "<group>"; };
+		1887F1281DB8716D008F0157 /* volume_icon_wave_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume_icon_wave_2@2x.png"; sourceTree = "<group>"; };
 		18996CBE1DB4693F0089D156 /* AVAudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioButton.h; sourceTree = "<group>"; };
 		18996CBF1DB4693F0089D156 /* AVAudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioButton.m; sourceTree = "<group>"; };
 		18996CC01DB4693F0089D156 /* AVAudioButtonConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioButtonConfigure.h; sourceTree = "<group>"; };
@@ -50,6 +60,7 @@
 		18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioView.m; sourceTree = "<group>"; };
 		18D0488E1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAudioPlayTableViewCell.h; sourceTree = "<group>"; };
 		18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAudioPlayTableViewCell.m; sourceTree = "<group>"; };
+		18DEA1C01DB73958008BBD95 /* Let It Go.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let It Go.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,15 +78,17 @@
 			isa = PBXGroup;
 			children = (
 				18996CC71DB4693F0089D156 /* images */,
+				18996CC01DB4693F0089D156 /* AVAudioButtonConfigure.h */,
 				18996CBE1DB4693F0089D156 /* AVAudioButton.h */,
 				18996CBF1DB4693F0089D156 /* AVAudioButton.m */,
-				18996CC01DB4693F0089D156 /* AVAudioButtonConfigure.h */,
 				18D0488B1DB5CF1300ED09B2 /* AVAudioView.h */,
 				18D0488C1DB5CF1300ED09B2 /* AVAudioView.m */,
 				18996CC11DB4693F0089D156 /* AVAudioPlayButton.h */,
 				18996CC21DB4693F0089D156 /* AVAudioPlayButton.m */,
 				18996CC51DB4693F0089D156 /* AVAudioVolumeView.h */,
 				18996CC61DB4693F0089D156 /* AVAudioVolumeView.m */,
+				1887F1231DB870FA008F0157 /* UIImage+VolumeExtension.h */,
+				1887F1241DB870FA008F0157 /* UIImage+VolumeExtension.m */,
 			);
 			path = AVAudioButton;
 			sourceTree = "<group>";
@@ -87,6 +100,9 @@
 				18996CC91DB4693F0089D156 /* cancelAVAudio@3x.png */,
 				18996CCA1DB4693F0089D156 /* microphone@2x.png */,
 				18996CCB1DB4693F0089D156 /* microphone@3x.png */,
+				1887F1261DB8716D008F0157 /* volume_icon_wave_0@2x.png */,
+				1887F1271DB8716D008F0157 /* volume_icon_wave_1@2x.png */,
+				1887F1281DB8716D008F0157 /* volume_icon_wave_2@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -117,6 +133,7 @@
 				18C13F641DB0770C005EAE50 /* ViewController.m */,
 				18D0488E1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.h */,
 				18D0488F1DB6038F00ED09B2 /* AVAudioPlayTableViewCell.m */,
+				18DEA1C01DB73958008BBD95 /* Let It Go.mp3 */,
 				18C13F661DB0770C005EAE50 /* Main.storyboard */,
 				18C13F691DB0770C005EAE50 /* Assets.xcassets */,
 				18C13F6B1DB0770C005EAE50 /* LaunchScreen.storyboard */,
@@ -194,9 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18996CD01DB4693F0089D156 /* cancelAVAudio@2x.png in Resources */,
+				1887F1291DB8716D008F0157 /* volume_icon_wave_0@2x.png in Resources */,
 				18C13F6D1DB0770C005EAE50 /* LaunchScreen.storyboard in Resources */,
 				18996CD21DB4693F0089D156 /* microphone@2x.png in Resources */,
+				1887F12A1DB8716D008F0157 /* volume_icon_wave_1@2x.png in Resources */,
+				18DEA1C11DB73958008BBD95 /* Let It Go.mp3 in Resources */,
 				18C13F6A1DB0770C005EAE50 /* Assets.xcassets in Resources */,
+				1887F12B1DB8716D008F0157 /* volume_icon_wave_2@2x.png in Resources */,
 				18996CD11DB4693F0089D156 /* cancelAVAudio@3x.png in Resources */,
 				18996CD31DB4693F0089D156 /* microphone@3x.png in Resources */,
 				18C13F681DB0770C005EAE50 /* Main.storyboard in Resources */,
@@ -210,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1887F1251DB870FA008F0157 /* UIImage+VolumeExtension.m in Sources */,
 				18996CCF1DB4693F0089D156 /* AVAudioVolumeView.m in Sources */,
 				18996CCD1DB4693F0089D156 /* AVAudioPlayButton.m in Sources */,
 				18C13F651DB0770C005EAE50 /* ViewController.m in Sources */,

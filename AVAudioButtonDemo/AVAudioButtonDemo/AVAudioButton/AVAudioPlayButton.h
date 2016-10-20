@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
     AAVAudioPlayButtonTypeRight
 } AVAudioPlayButtonType;
 
-@interface AVAudioPlayButton : UIButton
+@interface AVAudioPlayButton : UIView
 
 @property (nonatomic, assign) AVAudioPlayButtonType playButtonType;
 

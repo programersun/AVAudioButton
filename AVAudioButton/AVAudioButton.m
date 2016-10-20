@@ -189,6 +189,8 @@
     [self setAVAudioView];
     [self startRecorder];
     [self setTitle:@"松开 结束" forState:UIControlStateNormal];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFSVoiceBubbleShouldStopNotification object:nil];
 }
 
 #pragma mark - 手指松开

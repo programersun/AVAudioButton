@@ -20,6 +20,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
         self.playButtonType = AVAudioPlayButtonTypeLeft;
     }
     return self;
@@ -76,6 +77,7 @@
     [path closePath];
     [path fill];
     [path stroke];
+
 }
 
 @end

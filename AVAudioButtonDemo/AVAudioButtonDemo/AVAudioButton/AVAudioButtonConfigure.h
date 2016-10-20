@@ -21,6 +21,7 @@
 #define AudioPlayBorderColor [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1]
 
 #define kFSVoiceBubbleShouldStopNotification @"FSVoiceBubbleShouldStopNotification"
+#define UIImageNamed(imageName) [[UIImage imageNamed:[NSString stringWithFormat:@"%@", imageName]] imageWithRenderingMode:UIImageRenderingModeAutomatic]
 
 #define AVAudioButtonConfigure_h
 
