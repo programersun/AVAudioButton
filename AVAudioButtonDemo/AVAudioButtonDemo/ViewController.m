@@ -79,6 +79,9 @@
         }
     }
     
+//    NSData *data = [[NSData alloc] initWithContentsOfFile:self.recorderArray[0]];
+     NSData *data = [NSData dataWithContentsOfFile:self.recorderArray[0]];
+    
     [self.recorderArray addObject:[NSURL URLWithString:@"http://192.168.1.202:9002/fileAttachs/annex/10310/20161012150838.aac/20161012150838.aac"]];
     
 }
